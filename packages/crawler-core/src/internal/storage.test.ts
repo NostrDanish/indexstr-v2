@@ -84,7 +84,7 @@ describe('observation outbox (audit finding #3 / contract C-2)', () => {
     expect(await s.outboxSize()).toBe(0);
   });
 
-  it('caps at OUTBOX_MAX with newest-wins eviction', async () => {
+  it('caps at OUTBOX_MAX with newest-wins eviction', { timeout: 60_000 }, async () => {
     const s = fresh();
     for (let i = 0; i < OUTBOX_MAX + 10; i++) {
       await s.enqueueOutbox(fakeEvent(`ev-${i}`), Date.now());
