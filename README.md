@@ -4,7 +4,7 @@
 > full deep-crawler stack in your browser — SSRF-guarded fetching, IndexedDB
 > crawl queue/outbox, politeness scheduler — plus curated URL collections, and
 > publishes signed **kind 39697 web-index observations** to Nostr relays tagged
-> **`source=indexstr/2`**.
+> **`source=indexstr/v2`**.
 
 This is a self-contained v2 app repo, sliced from the web-crawler monorepo.
 Everything needed to build and run Indexstr v2 is in this tree (with one
@@ -37,9 +37,9 @@ pnpm --filter indexstr dev    # http://localhost:8080
 
 ## Source tag
 
-All SIP-01 observations published by this app carry `source=indexstr/2`
+All SIP-01 observations published by this app carry `source=indexstr/v2`
 (`apps/indexstr/src/hooks/useCrawler.ts` → `CRAWLER_SOURCE`), distinguishing
-v2 Indexstr nodes from v1 and from Crawlstr (`crawlstr/2`) nodes.
+v2 Indexstr nodes from v1 and from Crawlstr (`crawlstr/v2`) nodes.
 
 ## MISSING BINARIES
 

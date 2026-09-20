@@ -1,0 +1,15 @@
+{
+  "name": "indexstr-v2",
+  "private": true,
+  "version": "2.0.0",
+  "license": "MIT",
+  "description": "Indexstr v2 — distributed browser indexing network node for SIP-01 (self-contained app repo)",
+  "packageManager": "pnpm@12.4.2",
+  "scripts": {
+    "postinstall": "pnpm --filter @sip01/protocol run build",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "engines": { "node": ">=20" }
+}
