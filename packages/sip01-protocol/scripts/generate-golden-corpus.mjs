@@ -56,7 +56,7 @@ const INPUTS = [
   { url: 'https://blog.example.com/posts/7', title: 'Negative Published Dropped (clamp)', published: -315619200, description: 'Page claims 1960 — pre-1970 dates must never reach the wire.' },
   { url: 'https://blog.example.com/posts/8', title: 'Huge Published Kept', published: 999999999999999 },
   // --- 26–33: extension tags ---
-  { url: 'https://gitlab.com/group/project', title: 'GitLab Project', type: 'Repository', platform: 'GitHub', network: 'clearnet', country: 'de', mime: 'APPLICATION/PDF' },
+  { url: 'https://gitlab.com/group/project', title: 'GitLab Project', type: 'Repository', platform: 'GitLab', network: 'clearnet', country: 'de', mime: 'APPLICATION/PDF' },
   { url: 'https://docs.example.com/spec.pdf', title: 'PDF Spec', mime: 'application/pdf; charset=utf-8', type: 'file' },
   { url: 'https://onion.example.onion/hidden', title: 'Onion Service Doc', network: 'tor' },
   { url: 'https://example.com/bad-ext', title: 'Invalid Extensions Dropped', type: 'not a keyword!', country: 'DEN', mime: 'not-a-mime', platform: 'ok_platform-1' },
