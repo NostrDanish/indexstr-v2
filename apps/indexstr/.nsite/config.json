@@ -1,0 +1,22 @@
+{
+  "relays": [
+    "wss://relay.ditto.pub",
+    "wss://relay.dreamith.to",
+    "wss://relay.nsite.lol",
+    "wss://relay.nosto.re",
+    "wss://relay.primal.net"
+  ],
+  "servers": [
+    "https://blossom.ditto.pub",
+    "https://blossom.dreamith.to",
+    "https://blossom.primal.net",
+    "https://cdn.sovbit.host"
+  ],
+  "id": "indexstr",
+  "title": "indexstr",
+  "description": "Indexstr — the decentralized web indexing network. Turn spare browser, mobile and desktop capacity into a censorship-resistant, Nostr-powered web index",
+  "fallback": "/index.html",
+  "gatewayHostnames": [
+    "shakespeare.to"
+  ]
+}

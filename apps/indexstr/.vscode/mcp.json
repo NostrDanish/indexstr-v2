@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "js-dev": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@nostrbook/mcp@latest"]
+    }
+  }
+}
