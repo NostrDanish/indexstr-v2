@@ -9,6 +9,10 @@
  * change (`npm run build && node scripts/generate-golden-corpus.mjs`).
  */
 import { describe, it, expect } from 'vitest';
+import { existsSync, readFileSync } from 'node:fs';
+import { execSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
 
 import {
   buildIndexEvent,
@@ -17,7 +21,25 @@ import {
   normalizeIndexUrl,
   type IndexObservationInput,
 } from '../webIndex';
-import corpus from './golden-corpus.json';
+
+// The committed fixture is the network-fork guard. Standalone app-repo
+// checkouts (crawlstr-v2 / indexstr-v2) may lack it (delivery size limits) —
+// regenerate deterministically from the CURRENT code in that case. In the
+// monorepo the fixture is always committed, so the guard stays intact there.
+const here = dirname(fileURLToPath(import.meta.url));
+const corpusPath = join(here, 'golden-corpus.json');
+let corpusRaw: string;
+try {
+  corpusRaw = readFileSync(corpusPath, 'utf8');
+  JSON.parse(corpusRaw); // validate — a truncated fixture must regenerate
+} catch {
+  execSync('npm run build && node scripts/generate-golden-corpus.mjs', {
+    cwd: join(here, '..', '..'),
+    stdio: 'inherit',
+  });
+  corpusRaw = readFileSync(corpusPath, 'utf8');
+}
+const corpus = JSON.parse(corpusRaw);
 
 interface GoldenEntry {
   name: string;
