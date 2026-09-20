@@ -31,7 +31,7 @@ const INPUTS = [
   { url: 'https://example.com/', title: 'Example Domain' },
   { url: 'HTTPS://WWW.Example.Com:443/page/?b=2&utm_source=x&a=1#top', title: 'Spec Vector Page', description: 'Tracks utm_source stripping.' },
   { url: 'https://github.com/NostrDanish/Crwalstr', title: 'Crwalstr Repository', tags: ['nostr', 'crawler'], platform: 'github', type: 'repository' },
-  { url: 'http://example.org:80/path/to/page/', title: 'Plain HTTP With Default Port', source: 'crawlstr/2' },
+  { url: 'http://example.org:80/path/to/page/', title: 'Plain HTTP With Default Port', source: 'crawlstr/v2' },
   { url: 'https://example.net:8443/secure/page?x=1#frag', title: 'Non-Default Port', language: 'en', published: 1754600000 },
   { url: 'https://example.com/search?q=nostr+protocol&utm_medium=email&gclid=AbC123&page=2', title: 'Search Results', tags: ['search'] },
   { url: 'https://m.facebook.com/story.php?story_fbid=1&id=2&fbclid=IwAR123&mc_cid=abc&mc_eid=def', title: 'Social Story' },
@@ -56,7 +56,7 @@ const INPUTS = [
   { url: 'https://blog.example.com/posts/7', title: 'Negative Published Dropped (clamp)', published: -315619200, description: 'Page claims 1960 — pre-1970 dates must never reach the wire.' },
   { url: 'https://blog.example.com/posts/8', title: 'Huge Published Kept', published: 999999999999999 },
   // --- 26–33: extension tags ---
-  { url: 'https://gitlab.com/group/project', title: 'GitLab Project', type: 'Repository', platform: 'GitLab', network: 'clearnet', country: 'de', mime: 'APPLICATION/PDF' },
+  { url: 'https://gitlab.com/group/project', title: 'GitLab Project', type: 'Repository', platform: 'GitHub', network: 'clearnet', country: 'de', mime: 'APPLICATION/PDF' },
   { url: 'https://docs.example.com/spec.pdf', title: 'PDF Spec', mime: 'application/pdf; charset=utf-8', type: 'file' },
   { url: 'https://onion.example.onion/hidden', title: 'Onion Service Doc', network: 'tor' },
   { url: 'https://example.com/bad-ext', title: 'Invalid Extensions Dropped', type: 'not a keyword!', country: 'DEN', mime: 'not-a-mime', platform: 'ok_platform-1' },
@@ -78,11 +78,11 @@ const INPUTS = [
   { url: 'https://example.com/whitespace-title', title: '   Padded Title   ', description: '  Padded description.  ' },
   { url: 'https://example.com/no-desc', title: 'No Description Key' },
   { url: 'https://example.com/empty-desc', title: 'Empty Description', description: '' },
-  { url: 'https://example.com/long-source', title: 'Source Sliced To 100', source: 'crawlstr/2 '.repeat(20) },
+  { url: 'https://example.com/long-source', title: 'Source Sliced To 100', source: 'crawlstr/v2 '.repeat(20) },
   { url: 'https://example.com/newlines', title: 'Title', description: 'Line one.\nLine two.\tTabbed.' },
   // --- 48–50: more URL corner cases ---
   { url: 'https://example.org:443/', title: 'Explicit Default HTTPS Port' },
-  { url: 'http://www.example.com:8080/api/v1/items/?q=1&ref_src=twsrc', title: 'API Endpoint With ref_src', source: 'indexstr/2' },
+  { url: 'http://www.example.com:8080/api/v1/items/?q=1&ref_src=twsrc', title: 'API Endpoint With ref_src', source: 'indexstr/v2' },
   { url: '  https://example.com/needs-trim  ', title: 'Padded URL Input', tags: ['trim'] },
 ];
 

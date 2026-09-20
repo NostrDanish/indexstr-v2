@@ -31,17 +31,13 @@ function MenubarMenu({
 function MenubarGroup({
   ...props
 }: React.ComponentProps<typeof MenubarPrimitive.Group>) {
-  return (
-    <MenubarPrimitive.Group data-slot="menubar-group" {...props} />
-  )
+  return <MenubarPrimitive.Group data-slot="menubar-group" {...props} />
 }
 
 function MenubarPortal({
   ...props
 }: React.ComponentProps<typeof MenubarPrimitive.Portal>) {
-  return (
-    <MenubarPrimitive.Portal data-slot="menubar-portal" {...props} />
-  )
+  return <MenubarPrimitive.Portal data-slot="menubar-portal" {...props} />
 }
 
 function MenubarRadioGroup({
@@ -128,6 +124,7 @@ function MenubarCheckboxItem({
         "relative flex cursor-default items-center gap-2 rounded-xs py-1.5 pr-2 pl-8 text-sm outline-hidden select-none focus:bg-accent focus:text-accent-foreground data-disabled:pointer-events-none data-disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         className
       )}
+      {...props}
       checked={checked}
       {...props}
     >

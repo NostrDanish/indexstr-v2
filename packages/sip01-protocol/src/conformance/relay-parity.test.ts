@@ -169,7 +169,7 @@ describe('relay parity — builder/validator agreement invariants', () => {
         tags: [`topic${i}`, 'shared'],
         language: 'en',
         published: 1700000000 + i,
-        source: 'crawlstr/2',
+        source: 'crawlstr/v2',
       }))!;
       const signed = sign(event.kind, event.content, event.tags);
       expect(validateWebDocument(signed)).toBeUndefined();
