@@ -1,0 +1,2154 @@
+{
+  "$comment": "SIP-01 golden corpus v1 — 50 events. Byte-exact wire output of @sip01/protocol buildIndexEvent. Regenerate ONLY with an intentional wire-format change: npm run build && node scripts/generate-golden-corpus.mjs. A diff here without a spec revision = a network fork.",
+  "generatedBy": "@sip01/protocol scripts/generate-golden-corpus.mjs",
+  "schemaVersion": "1",
+  "events": [
+    {
+      "name": "#01 Example Domain",
+      "input": {
+        "url": "https://example.com/",
+        "title": "Example Domain"
+      },
+      "expected": {
+        "normalized": "https://example.com/",
+        "d": "widx:0f115db062b7c0dd030b16878c99dea5",
+        "x": "aa57cf1d596d2ccff473a2ff749717b9b3c70e436d84084aedde0f1e6adc9534",
+        "content": "{\"title\":\"Example Domain\"}",
+        "tags": [
+          [
+            "d",
+            "widx:0f115db062b7c0dd030b16878c99dea5"
+          ],
+          [
+            "u",
+            "https://example.com/"
+          ],
+          [
+            "x",
+            "aa57cf1d596d2ccff473a2ff749717b9b3c70e436d84084aedde0f1e6adc9534"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Example Domain"
+          ]
+        ],
+        "contentHashRecomputed": "aa57cf1d596d2ccff473a2ff749717b9b3c70e436d84084aedde0f1e6adc9534",
+        "documentIdRecomputed": "widx:0f115db062b7c0dd030b16878c99dea5"
+      }
+    },
+    {
+      "name": "#02 Spec Vector Page",
+      "input": {
+        "url": "HTTPS://WWW.Example.Com:443/page/?b=2&utm_source=x&a=1#top",
+        "title": "Spec Vector Page",
+        "description": "Tracks utm_source stripping."
+      },
+      "expected": {
+        "normalized": "https://example.com/page?a=1&b=2",
+        "d": "widx:f68176b3eb966bd682c3c6eadcc5fe44",
+        "x": "2b6c964d45d10ff7ae7df0d5b581483ad07fccbc1e604842c63b779c8a469360",
+        "content": "{\"title\":\"Spec Vector Page\",\"description\":\"Tracks utm_source stripping.\"}",
+        "tags": [
+          [
+            "d",
+            "widx:f68176b3eb966bd682c3c6eadcc5fe44"
+          ],
+          [
+            "u",
+            "https://example.com/page?a=1&b=2"
+          ],
+          [
+            "x",
+            "2b6c964d45d10ff7ae7df0d5b581483ad07fccbc1e604842c63b779c8a469360"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Spec Vector Page"
+          ]
+        ],
+        "contentHashRecomputed": "2b6c964d45d10ff7ae7df0d5b581483ad07fccbc1e604842c63b779c8a469360",
+        "documentIdRecomputed": "widx:f68176b3eb966bd682c3c6eadcc5fe44"
+      }
+    },
+    {
+      "name": "#03 Crwalstr Repository",
+      "input": {
+        "url": "https://github.com/NostrDanish/Crwalstr",
+        "title": "Crwalstr Repository",
+        "tags": [
+          "nostr",
+          "crawler"
+        ],
+        "platform": "github",
+        "type": "repository"
+      },
+      "expected": {
+        "normalized": "https://github.com/NostrDanish/Crwalstr",
+        "d": "widx:cdfd4df8c01d609fc9cdf943afa80197",
+        "x": "1b879df441ef43a4f8347e981c9e32ecb154f61540c6bc5264e30b29b97e951a",
+        "content": "{\"title\":\"Crwalstr Repository\"}",
+        "tags": [
+          [
+            "d",
+            "widx:cdfd4df8c01d609fc9cdf943afa80197"
+          ],
+          [
+            "u",
+            "https://github.com/NostrDanish/Crwalstr"
+          ],
+          [
+            "t",
+            "nostr"
+          ],
+          [
+            "t",
+            "crawler"
+          ],
+          [
+            "x",
+            "1b879df441ef43a4f8347e981c9e32ecb154f61540c6bc5264e30b29b97e951a"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "type",
+            "repository"
+          ],
+          [
+            "platform",
+            "github"
+          ],
+          [
+            "alt",
+            "Web index observation: Crwalstr Repository"
+          ]
+        ],
+        "contentHashRecomputed": "1b879df441ef43a4f8347e981c9e32ecb154f61540c6bc5264e30b29b97e951a",
+        "documentIdRecomputed": "widx:cdfd4df8c01d609fc9cdf943afa80197"
+      }
+    },
+    {
+      "name": "#04 Plain HTTP With Default Port",
+      "input": {
+        "url": "http://example.org:80/path/to/page/",
+        "title": "Plain HTTP With Default Port",
+        "source": "crawlstr/v2"
+      },
+      "expected": {
+        "normalized": "http://example.org/path/to/page",
+        "d": "widx:408a50a4405b641c6263853d4a2329d9",
+        "x": "9d87a8408b0081285220b6f3fb4691a128a670c490bd8fa092c10308e4f49861",
+        "content": "{\"title\":\"Plain HTTP With Default Port\"}",
+        "tags": [
+          [
+            "d",
+            "widx:408a50a4405b641c6263853d4a2329d9"
+          ],
+          [
+            "u",
+            "http://example.org/path/to/page"
+          ],
+          [
+            "x",
+            "9d87a8408b0081285220b6f3fb4691a128a670c490bd8fa092c10308e4f49861"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "source",
+            "crawlstr/v2"
+          ],
+          [
+            "alt",
+            "Web index observation: Plain HTTP With Default Port"
+          ]
+        ],
+        "contentHashRecomputed": "9d87a8408b0081285220b6f3fb4691a128a670c490bd8fa092c10308e4f49861",
+        "documentIdRecomputed": "widx:408a50a4405b641c6263853d4a2329d9"
+      }
+    },
+    {
+      "name": "#05 Non-Default Port",
+      "input": {
+        "url": "https://example.net:8443/secure/page?x=1#frag",
+        "title": "Non-Default Port",
+        "language": "en",
+        "published": 1754600000
+      },
+      "expected": {
+        "normalized": "https://example.net:8443/secure/page?x=1",
+        "d": "widx:5f34fe08e614b152f2fbbf448de06f68",
+        "x": "7e5b153e95458787d09ce7934bc213364fc4fa1fc4ff0dddc7ff034c3e878cfc",
+        "content": "{\"title\":\"Non-Default Port\"}",
+        "tags": [
+          [
+            "d",
+            "widx:5f34fe08e614b152f2fbbf448de06f68"
+          ],
+          [
+            "u",
+            "https://example.net:8443/secure/page?x=1"
+          ],
+          [
+            "l",
+            "en"
+          ],
+          [
+            "x",
+            "7e5b153e95458787d09ce7934bc213364fc4fa1fc4ff0dddc7ff034c3e878cfc"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "published",
+            "1754600000"
+          ],
+          [
+            "alt",
+            "Web index observation: Non-Default Port"
+          ]
+        ],
+        "contentHashRecomputed": "7e5b153e95458787d09ce7934bc213364fc4fa1fc4ff0dddc7ff034c3e878cfc",
+        "documentIdRecomputed": "widx:5f34fe08e614b152f2fbbf448de06f68"
+      }
+    },
+    {
+      "name": "#06 Search Results",
+      "input": {
+        "url": "https://example.com/search?q=nostr+protocol&utm_medium=email&gclid=AbC123&page=2",
+        "title": "Search Results",
+        "tags": [
+          "search"
+        ]
+      },
+      "expected": {
+        "normalized": "https://example.com/search?page=2&q=nostr+protocol",
+        "d": "widx:f0c8374562ad64f0d86742ec6e171b3c",
+        "x": "f66161f69523054d6c76b09f5bf9177c92c2aeaab284e6dda5b0a1cea6a795ee",
+        "content": "{\"title\":\"Search Results\"}",
+        "tags": [
+          [
+            "d",
+            "widx:f0c8374562ad64f0d86742ec6e171b3c"
+          ],
+          [
+            "u",
+            "https://example.com/search?page=2&q=nostr+protocol"
+          ],
+          [
+            "t",
+            "search"
+          ],
+          [
+            "x",
+            "f66161f69523054d6c76b09f5bf9177c92c2aeaab284e6dda5b0a1cea6a795ee"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Search Results"
+          ]
+        ],
+        "contentHashRecomputed": "f66161f69523054d6c76b09f5bf9177c92c2aeaab284e6dda5b0a1cea6a795ee",
+        "documentIdRecomputed": "widx:f0c8374562ad64f0d86742ec6e171b3c"
+      }
+    },
+    {
+      "name": "#07 Social Story",
+      "input": {
+        "url": "https://m.facebook.com/story.php?story_fbid=1&id=2&fbclid=IwAR123&mc_cid=abc&mc_eid=def",
+        "title": "Social Story"
+      },
+      "expected": {
+        "normalized": "https://m.facebook.com/story.php?id=2&story_fbid=1",
+        "d": "widx:3b3130eacd3f2699dfd777e2b2e155bf",
+        "x": "6bbda0e47cd63244c02a4d48e4cbd1a3fcf69f41ffca8f0610ba82b48aeb0db4",
+        "content": "{\"title\":\"Social Story\"}",
+        "tags": [
+          [
+            "d",
+            "widx:3b3130eacd3f2699dfd777e2b2e155bf"
+          ],
+          [
+            "u",
+            "https://m.facebook.com/story.php?id=2&story_fbid=1"
+          ],
+          [
+            "x",
+            "6bbda0e47cd63244c02a4d48e4cbd1a3fcf69f41ffca8f0610ba82b48aeb0db4"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Social Story"
+          ]
+        ],
+        "contentHashRecomputed": "6bbda0e47cd63244c02a4d48e4cbd1a3fcf69f41ffca8f0610ba82b48aeb0db4",
+        "documentIdRecomputed": "widx:3b3130eacd3f2699dfd777e2b2e155bf"
+      }
+    },
+    {
+      "name": "#08 Video With si Param",
+      "input": {
+        "url": "https://youtu.be/watch?v=dQw4w9WgXcQ&si=tracking&t=42s",
+        "title": "Video With si Param",
+        "platform": "youtube",
+        "type": "video"
+      },
+      "expected": {
+        "normalized": "https://youtu.be/watch?t=42s&v=dQw4w9WgXcQ",
+        "d": "widx:0ee01dbe3e9f84c6e01840f1a5bd5340",
+        "x": "9775bdbc35bab698a75b0f9ce1ef8540e5f3b60efab5cad8929d9efc6d1111a1",
+        "content": "{\"title\":\"Video With si Param\"}",
+        "tags": [
+          [
+            "d",
+            "widx:0ee01dbe3e9f84c6e01840f1a5bd5340"
+          ],
+          [
+            "u",
+            "https://youtu.be/watch?t=42s&v=dQw4w9WgXcQ"
+          ],
+          [
+            "x",
+            "9775bdbc35bab698a75b0f9ce1ef8540e5f3b60efab5cad8929d9efc6d1111a1"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "type",
+            "video"
+          ],
+          [
+            "platform",
+            "youtube"
+          ],
+          [
+            "alt",
+            "Web index observation: Video With si Param"
+          ]
+        ],
+        "contentHashRecomputed": "9775bdbc35bab698a75b0f9ce1ef8540e5f3b60efab5cad8929d9efc6d1111a1",
+        "documentIdRecomputed": "widx:0ee01dbe3e9f84c6e01840f1a5bd5340"
+      }
+    },
+    {
+      "name": "#09 Duplicate Query Keys",
+      "input": {
+        "url": "https://example.com/dup?k=1&k=2&k=3&a=z",
+        "title": "Duplicate Query Keys",
+        "description": "Stable sort keeps duplicate-key order."
+      },
+      "expected": {
+        "normalized": "https://example.com/dup?a=z&k=1&k=2&k=3",
+        "d": "widx:fc81f61d1fcc6c25327c5b4337b58ce3",
+        "x": "f4f3837fc4745f089e8830935eba7f257f8e046b2977252cb30c4631122a1107",
+        "content": "{\"title\":\"Duplicate Query Keys\",\"description\":\"Stable sort keeps duplicate-key order.\"}",
+        "tags": [
+          [
+            "d",
+            "widx:fc81f61d1fcc6c25327c5b4337b58ce3"
+          ],
+          [
+            "u",
+            "https://example.com/dup?a=z&k=1&k=2&k=3"
+          ],
+          [
+            "x",
+            "f4f3837fc4745f089e8830935eba7f257f8e046b2977252cb30c4631122a1107"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Duplicate Query Keys"
+          ]
+        ],
+        "contentHashRecomputed": "f4f3837fc4745f089e8830935eba7f257f8e046b2977252cb30c4631122a1107",
+        "documentIdRecomputed": "widx:fc81f61d1fcc6c25327c5b4337b58ce3"
+      }
+    },
+    {
+      "name": "#10 Empty Query Values",
+      "input": {
+        "url": "https://example.com/empty?a=&b=2&utm_campaign=",
+        "title": "Empty Query Values"
+      },
+      "expected": {
+        "normalized": "https://example.com/empty?a=&b=2",
+        "d": "widx:677291a44e04b84babee48bc19e0783c",
+        "x": "f381741148d253f29a24ae42379df7baf35f8f969618a8e2e06f0c9e67091d18",
+        "content": "{\"title\":\"Empty Query Values\"}",
+        "tags": [
+          [
+            "d",
+            "widx:677291a44e04b84babee48bc19e0783c"
+          ],
+          [
+            "u",
+            "https://example.com/empty?a=&b=2"
+          ],
+          [
+            "x",
+            "f381741148d253f29a24ae42379df7baf35f8f969618a8e2e06f0c9e67091d18"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Empty Query Values"
+          ]
+        ],
+        "contentHashRecomputed": "f381741148d253f29a24ae42379df7baf35f8f969618a8e2e06f0c9e67091d18",
+        "documentIdRecomputed": "widx:677291a44e04b84babee48bc19e0783c"
+      }
+    },
+    {
+      "name": "#11 Ünïcodé Tïtlé",
+      "input": {
+        "url": "https://example.com/ümlaut/über",
+        "title": "Ünïcodé Tïtlé",
+        "description": "Beschreibung mit Umlauten.",
+        "language": "de"
+      },
+      "expected": {
+        "normalized": "https://example.com/%C3%BCmlaut/%C3%BCber",
+        "d": "widx:abe9cfce9beac5e0a2343495a650a957",
+        "x": "0e9488f62576176ae49b1ce742e59c4afa68873e1894bf8a77bbd0eb4cbcac2d",
+        "content": "{\"title\":\"Ünïcodé Tïtlé\",\"description\":\"Beschreibung mit Umlauten.\"}",
+        "tags": [
+          [
+            "d",
+            "widx:abe9cfce9beac5e0a2343495a650a957"
+          ],
+          [
+            "u",
+            "https://example.com/%C3%BCmlaut/%C3%BCber"
+          ],
+          [
+            "l",
+            "de"
+          ],
+          [
+            "x",
+            "0e9488f62576176ae49b1ce742e59c4afa68873e1894bf8a77bbd0eb4cbcac2d"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Ünïcodé Tïtlé"
+          ]
+        ],
+        "contentHashRecomputed": "0e9488f62576176ae49b1ce742e59c4afa68873e1894bf8a77bbd0eb4cbcac2d",
+        "documentIdRecomputed": "widx:abe9cfce9beac5e0a2343495a650a957"
+      }
+    },
+    {
+      "name": "#12 日本語のページ",
+      "input": {
+        "url": "https://ja.example.jp/記事/検索?クエリ=値&utm_term=x",
+        "title": "日本語のページ",
+        "description": "日本語の説明文。",
+        "language": "ja",
+        "country": "jp"
+      },
+      "expected": {
+        "normalized": "https://ja.example.jp/%E8%A8%98%E4%BA%8B/%E6%A4%9C%E7%B4%A2?%E3%82%AF%E3%82%A8%E3%83%AA=%E5%80%A4",
+        "d": "widx:d5c71daba03c325c761e410b1e00650c",
+        "x": "159bdd5659bb0b1013d3e03c7832fad630de22aafd62fdeb7f412f919fdd8ef2",
+        "content": "{\"title\":\"日本語のページ\",\"description\":\"日本語の説明文。\"}",
+        "tags": [
+          [
+            "d",
+            "widx:d5c71daba03c325c761e410b1e00650c"
+          ],
+          [
+            "u",
+            "https://ja.example.jp/%E8%A8%98%E4%BA%8B/%E6%A4%9C%E7%B4%A2?%E3%82%AF%E3%82%A8%E3%83%AA=%E5%80%A4"
+          ],
+          [
+            "l",
+            "ja"
+          ],
+          [
+            "x",
+            "159bdd5659bb0b1013d3e03c7832fad630de22aafd62fdeb7f412f919fdd8ef2"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "country",
+            "JP"
+          ],
+          [
+            "alt",
+            "Web index observation: 日本語のページ"
+          ]
+        ],
+        "contentHashRecomputed": "159bdd5659bb0b1013d3e03c7832fad630de22aafd62fdeb7f412f919fdd8ef2",
+        "documentIdRecomputed": "widx:d5c71daba03c325c761e410b1e00650c"
+      }
+    },
+    {
+      "name": "#13 Emoji Path 🚀",
+      "input": {
+        "url": "https://example.com/emoji/🚀/launch",
+        "title": "Emoji Path 🚀",
+        "tags": [
+          "emoji"
+        ]
+      },
+      "expected": {
+        "normalized": "https://example.com/emoji/%F0%9F%9A%80/launch",
+        "d": "widx:16c479a0b611c2242f4c5cf2ed3f6c07",
+        "x": "742b3510c5c4c6cbf735a0eeb290a570a6daf14a92a283c35e4dd1a4f64a10a7",
+        "content": "{\"title\":\"Emoji Path 🚀\"}",
+        "tags": [
+          [
+            "d",
+            "widx:16c479a0b611c2242f4c5cf2ed3f6c07"
+          ],
+          [
+            "u",
+            "https://example.com/emoji/%F0%9F%9A%80/launch"
+          ],
+          [
+            "t",
+            "emoji"
+          ],
+          [
+            "x",
+            "742b3510c5c4c6cbf735a0eeb290a570a6daf14a92a283c35e4dd1a4f64a10a7"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Emoji Path 🚀"
+          ]
+        ],
+        "contentHashRecomputed": "742b3510c5c4c6cbf735a0eeb290a570a6daf14a92a283c35e4dd1a4f64a10a7",
+        "documentIdRecomputed": "widx:16c479a0b611c2242f4c5cf2ed3f6c07"
+      }
+    },
+    {
+      "name": "#14 中文标题",
+      "input": {
+        "url": "https://zh.example.cn:8080/页面?关键词=测试&spm=a2e4d",
+        "title": "中文标题",
+        "language": "zh",
+        "published": 1699999999
+      },
+      "expected": {
+        "normalized": "https://zh.example.cn:8080/%E9%A1%B5%E9%9D%A2?%E5%85%B3%E9%94%AE%E8%AF%8D=%E6%B5%8B%E8%AF%95",
+        "d": "widx:4de7b72be9e880314537ebd653512aae",
+        "x": "9ea836a12ddd9c16001baf5e3291bb2c2bd218a28d58fc6331bdde0c09fbd4be",
+        "content": "{\"title\":\"中文标题\"}",
+        "tags": [
+          [
+            "d",
+            "widx:4de7b72be9e880314537ebd653512aae"
+          ],
+          [
+            "u",
+            "https://zh.example.cn:8080/%E9%A1%B5%E9%9D%A2?%E5%85%B3%E9%94%AE%E8%AF%8D=%E6%B5%8B%E8%AF%95"
+          ],
+          [
+            "l",
+            "zh"
+          ],
+          [
+            "x",
+            "9ea836a12ddd9c16001baf5e3291bb2c2bd218a28d58fc6331bdde0c09fbd4be"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "published",
+            "1699999999"
+          ],
+          [
+            "alt",
+            "Web index observation: 中文标题"
+          ]
+        ],
+        "contentHashRecomputed": "9ea836a12ddd9c16001baf5e3291bb2c2bd218a28d58fc6331bdde0c09fbd4be",
+        "documentIdRecomputed": "widx:4de7b72be9e880314537ebd653512aae"
+      }
+    },
+    {
+      "name": "#15 Punycode Host",
+      "input": {
+        "url": "https://xn--nxasmq6b.example.gr/greek",
+        "title": "Punycode Host"
+      },
+      "expected": {
+        "normalized": "https://xn--nxasmq6b.example.gr/greek",
+        "d": "widx:a1cd7adde4f7077c3dc05acd12629750",
+        "x": "3493bb0a4fd33494e1a356977371bea7650c87859e4734efd51a3e8429b86a83",
+        "content": "{\"title\":\"Punycode Host\"}",
+        "tags": [
+          [
+            "d",
+            "widx:a1cd7adde4f7077c3dc05acd12629750"
+          ],
+          [
+            "u",
+            "https://xn--nxasmq6b.example.gr/greek"
+          ],
+          [
+            "x",
+            "3493bb0a4fd33494e1a356977371bea7650c87859e4734efd51a3e8429b86a83"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Punycode Host"
+          ]
+        ],
+        "contentHashRecomputed": "3493bb0a4fd33494e1a356977371bea7650c87859e4734efd51a3e8429b86a83",
+        "documentIdRecomputed": "widx:a1cd7adde4f7077c3dc05acd12629750"
+      }
+    },
+    {
+      "name": "#16 Café Menu",
+      "input": {
+        "url": "https://example.com/café?menu=crème+brûlée",
+        "title": "Café Menu",
+        "language": "fr",
+        "country": "FR"
+      },
+      "expected": {
+        "normalized": "https://example.com/caf%C3%A9?menu=cr%C3%A8me+br%C3%BBl%C3%A9e",
+        "d": "widx:0d7e0b3680902bbfd77ecdffed648e06",
+        "x": "c042619fbbb80c7957d2a132ff36b8f9cb7b2dbfb9af81945d21823152d495e4",
+        "content": "{\"title\":\"Café Menu\"}",
+        "tags": [
+          [
+            "d",
+            "widx:0d7e0b3680902bbfd77ecdffed648e06"
+          ],
+          [
+            "u",
+            "https://example.com/caf%C3%A9?menu=cr%C3%A8me+br%C3%BBl%C3%A9e"
+          ],
+          [
+            "l",
+            "fr"
+          ],
+          [
+            "x",
+            "c042619fbbb80c7957d2a132ff36b8f9cb7b2dbfb9af81945d21823152d495e4"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "country",
+            "FR"
+          ],
+          [
+            "alt",
+            "Web index observation: Café Menu"
+          ]
+        ],
+        "contentHashRecomputed": "c042619fbbb80c7957d2a132ff36b8f9cb7b2dbfb9af81945d21823152d495e4",
+        "documentIdRecomputed": "widx:0d7e0b3680902bbfd77ecdffed648e06"
+      }
+    },
+    {
+      "name": "#17 Pre-Encoded Path Segments",
+      "input": {
+        "url": "https://example.com/a%2Fb/c%20d",
+        "title": "Pre-Encoded Path Segments"
+      },
+      "expected": {
+        "normalized": "https://example.com/a%2Fb/c%20d",
+        "d": "widx:85fd6b13e5eb0d073082b0cc210e7185",
+        "x": "b6188e7b23549a2ce004c023acb7c4307ddd790b95b8ec122da174f7d58b56a6",
+        "content": "{\"title\":\"Pre-Encoded Path Segments\"}",
+        "tags": [
+          [
+            "d",
+            "widx:85fd6b13e5eb0d073082b0cc210e7185"
+          ],
+          [
+            "u",
+            "https://example.com/a%2Fb/c%20d"
+          ],
+          [
+            "x",
+            "b6188e7b23549a2ce004c023acb7c4307ddd790b95b8ec122da174f7d58b56a6"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Pre-Encoded Path Segments"
+          ]
+        ],
+        "contentHashRecomputed": "b6188e7b23549a2ce004c023acb7c4307ddd790b95b8ec122da174f7d58b56a6",
+        "documentIdRecomputed": "widx:85fd6b13e5eb0d073082b0cc210e7185"
+      }
+    },
+    {
+      "name": "#18 Many Topics",
+      "input": {
+        "url": "https://blog.example.com/posts/1",
+        "title": "Many Topics",
+        "tags": [
+          "One",
+          "TWO",
+          "three-tag",
+          "one",
+          " four ",
+          "C++",
+          "under_score",
+          "-bad",
+          "ok5",
+          "t6",
+          "t7",
+          "t8",
+          "t9",
+          "t10"
+        ]
+      },
+      "expected": {
+        "normalized": "https://blog.example.com/posts/1",
+        "d": "widx:f37ebc21fd6867b5bf0eef2535dcaead",
+        "x": "c3c2c493b5655c882155ae40acc08ed424b981b4c2f57983b4bf44719ec78c68",
+        "content": "{\"title\":\"Many Topics\"}",
+        "tags": [
+          [
+            "d",
+            "widx:f37ebc21fd6867b5bf0eef2535dcaead"
+          ],
+          [
+            "u",
+            "https://blog.example.com/posts/1"
+          ],
+          [
+            "t",
+            "one"
+          ],
+          [
+            "t",
+            "two"
+          ],
+          [
+            "t",
+            "three-tag"
+          ],
+          [
+            "t",
+            "four"
+          ],
+          [
+            "t",
+            "ok5"
+          ],
+          [
+            "t",
+            "t6"
+          ],
+          [
+            "t",
+            "t7"
+          ],
+          [
+            "t",
+            "t8"
+          ],
+          [
+            "x",
+            "c3c2c493b5655c882155ae40acc08ed424b981b4c2f57983b4bf44719ec78c68"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Many Topics"
+          ]
+        ],
+        "contentHashRecomputed": "c3c2c493b5655c882155ae40acc08ed424b981b4c2f57983b4bf44719ec78c68",
+        "documentIdRecomputed": "widx:f37ebc21fd6867b5bf0eef2535dcaead"
+      }
+    },
+    {
+      "name": "#19 Whitespace Topics",
+      "input": {
+        "url": "https://blog.example.com/posts/2",
+        "title": "Whitespace Topics",
+        "tags": [
+          "privacy tools",
+          "web  search",
+          "nostr"
+        ]
+      },
+      "expected": {
+        "normalized": "https://blog.example.com/posts/2",
+        "d": "widx:a5ec26c859774b4cb6f6957c740d140a",
+        "x": "8dc1bb98ff7bb382574b823a3f3cbdd8a7f6893b0a37714a80b172277ed8622e",
+        "content": "{\"title\":\"Whitespace Topics\"}",
+        "tags": [
+          [
+            "d",
+            "widx:a5ec26c859774b4cb6f6957c740d140a"
+          ],
+          [
+            "u",
+            "https://blog.example.com/posts/2"
+          ],
+          [
+            "t",
+            "privacy-tools"
+          ],
+          [
+            "t",
+            "web-search"
+          ],
+          [
+            "t",
+            "nostr"
+          ],
+          [
+            "x",
+            "8dc1bb98ff7bb382574b823a3f3cbdd8a7f6893b0a37714a80b172277ed8622e"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Whitespace Topics"
+          ]
+        ],
+        "contentHashRecomputed": "8dc1bb98ff7bb382574b823a3f3cbdd8a7f6893b0a37714a80b172277ed8622e",
+        "documentIdRecomputed": "widx:a5ec26c859774b4cb6f6957c740d140a"
+      }
+    },
+    {
+      "name": "#20 Invalid Language Dropped",
+      "input": {
+        "url": "https://blog.example.com/posts/3",
+        "title": "Invalid Language Dropped",
+        "language": "eng"
+      },
+      "expected": {
+        "normalized": "https://blog.example.com/posts/3",
+        "d": "widx:09bc7ee7e55ddc55474c1fadc4fa0b19",
+        "x": "7f0cfa8e99bd7bbe47095a659a314da56250e6e5b346aa18c12d2ef23b3e993e",
+        "content": "{\"title\":\"Invalid Language Dropped\"}",
+        "tags": [
+          [
+            "d",
+            "widx:09bc7ee7e55ddc55474c1fadc4fa0b19"
+          ],
+          [
+            "u",
+            "https://blog.example.com/posts/3"
+          ],
+          [
+            "x",
+            "7f0cfa8e99bd7bbe47095a659a314da56250e6e5b346aa18c12d2ef23b3e993e"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Invalid Language Dropped"
+          ]
+        ],
+        "contentHashRecomputed": "7f0cfa8e99bd7bbe47095a659a314da56250e6e5b346aa18c12d2ef23b3e993e",
+        "documentIdRecomputed": "widx:09bc7ee7e55ddc55474c1fadc4fa0b19"
+      }
+    },
+    {
+      "name": "#21 Uppercase Language Normalized",
+      "input": {
+        "url": "https://blog.example.com/posts/4",
+        "title": "Uppercase Language Normalized",
+        "language": "EN",
+        "published": 1
+      },
+      "expected": {
+        "normalized": "https://blog.example.com/posts/4",
+        "d": "widx:6c15110fa6bf91cf32b7a891ade869da",
+        "x": "911b68e574f00a01b52755ca8bff61e802beffde3044a1fe74a1cbfb2b9766bf",
+        "content": "{\"title\":\"Uppercase Language Normalized\"}",
+        "tags": [
+          [
+            "d",
+            "widx:6c15110fa6bf91cf32b7a891ade869da"
+          ],
+          [
+            "u",
+            "https://blog.example.com/posts/4"
+          ],
+          [
+            "l",
+            "en"
+          ],
+          [
+            "x",
+            "911b68e574f00a01b52755ca8bff61e802beffde3044a1fe74a1cbfb2b9766bf"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "published",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Uppercase Language Normalized"
+          ]
+        ],
+        "contentHashRecomputed": "911b68e574f00a01b52755ca8bff61e802beffde3044a1fe74a1cbfb2b9766bf",
+        "documentIdRecomputed": "widx:6c15110fa6bf91cf32b7a891ade869da"
+      }
+    },
+    {
+      "name": "#22 Fractional Published Floored",
+      "input": {
+        "url": "https://blog.example.com/posts/5",
+        "title": "Fractional Published Floored",
+        "published": 1754600000.9
+      },
+      "expected": {
+        "normalized": "https://blog.example.com/posts/5",
+        "d": "widx:1f42ca4912108821235fa34b910a491e",
+        "x": "cfeb778e3097870200e22ed288f66c49e3bd9069eb9ff05a0d45c83f491fb05c",
+        "content": "{\"title\":\"Fractional Published Floored\"}",
+        "tags": [
+          [
+            "d",
+            "widx:1f42ca4912108821235fa34b910a491e"
+          ],
+          [
+            "u",
+            "https://blog.example.com/posts/5"
+          ],
+          [
+            "x",
+            "cfeb778e3097870200e22ed288f66c49e3bd9069eb9ff05a0d45c83f491fb05c"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "published",
+            "1754600000"
+          ],
+          [
+            "alt",
+            "Web index observation: Fractional Published Floored"
+          ]
+        ],
+        "contentHashRecomputed": "cfeb778e3097870200e22ed288f66c49e3bd9069eb9ff05a0d45c83f491fb05c",
+        "documentIdRecomputed": "widx:1f42ca4912108821235fa34b910a491e"
+      }
+    },
+    {
+      "name": "#23 Zero Published Dropped (clamp)",
+      "input": {
+        "url": "https://blog.example.com/posts/6",
+        "title": "Zero Published Dropped (clamp)",
+        "published": 0
+      },
+      "expected": {
+        "normalized": "https://blog.example.com/posts/6",
+        "d": "widx:71fa425da1cc15a548b659ec31816172",
+        "x": "6b598b8490996c1b6caaf9ba78a83a26b05c56df71e6edf50584339fc535dd53",
+        "content": "{\"title\":\"Zero Published Dropped (clamp)\"}",
+        "tags": [
+          [
+            "d",
+            "widx:71fa425da1cc15a548b659ec31816172"
+          ],
+          [
+            "u",
+            "https://blog.example.com/posts/6"
+          ],
+          [
+            "x",
+            "6b598b8490996c1b6caaf9ba78a83a26b05c56df71e6edf50584339fc535dd53"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Zero Published Dropped (clamp)"
+          ]
+        ],
+        "contentHashRecomputed": "6b598b8490996c1b6caaf9ba78a83a26b05c56df71e6edf50584339fc535dd53",
+        "documentIdRecomputed": "widx:71fa425da1cc15a548b659ec31816172"
+      }
+    },
+    {
+      "name": "#24 Negative Published Dropped (clamp)",
+      "input": {
+        "url": "https://blog.example.com/posts/7",
+        "title": "Negative Published Dropped (clamp)",
+        "published": -315619200,
+        "description": "Page claims 1960 — pre-1970 dates must never reach the wire."
+      },
+      "expected": {
+        "normalized": "https://blog.example.com/posts/7",
+        "d": "widx:d62a138a452aa90625271dd5ab10db50",
+        "x": "b26311be5981d809fd991fa567b8289d617af85c2a4e1508e9da7ae5a7890aa0",
+        "content": "{\"title\":\"Negative Published Dropped (clamp)\",\"description\":\"Page claims 1960 — pre-1970 dates must never reach the wire.\"}",
+        "tags": [
+          [
+            "d",
+            "widx:d62a138a452aa90625271dd5ab10db50"
+          ],
+          [
+            "u",
+            "https://blog.example.com/posts/7"
+          ],
+          [
+            "x",
+            "b26311be5981d809fd991fa567b8289d617af85c2a4e1508e9da7ae5a7890aa0"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Negative Published Dropped (clamp)"
+          ]
+        ],
+        "contentHashRecomputed": "b26311be5981d809fd991fa567b8289d617af85c2a4e1508e9da7ae5a7890aa0",
+        "documentIdRecomputed": "widx:d62a138a452aa90625271dd5ab10db50"
+      }
+    },
+    {
+      "name": "#25 Huge Published Kept",
+      "input": {
+        "url": "https://blog.example.com/posts/8",
+        "title": "Huge Published Kept",
+        "published": 999999999999999
+      },
+      "expected": {
+        "normalized": "https://blog.example.com/posts/8",
+        "d": "widx:3926b52c4cbe976facd635493d440992",
+        "x": "e37bb02cc2cbe17a5634275b94ca4bdb287f2d2d99ac855f5b434450c8201bf8",
+        "content": "{\"title\":\"Huge Published Kept\"}",
+        "tags": [
+          [
+            "d",
+            "widx:3926b52c4cbe976facd635493d440992"
+          ],
+          [
+            "u",
+            "https://blog.example.com/posts/8"
+          ],
+          [
+            "x",
+            "e37bb02cc2cbe17a5634275b94ca4bdb287f2d2d99ac855f5b434450c8201bf8"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "published",
+            "999999999999999"
+          ],
+          [
+            "alt",
+            "Web index observation: Huge Published Kept"
+          ]
+        ],
+        "contentHashRecomputed": "e37bb02cc2cbe17a5634275b94ca4bdb287f2d2d99ac855f5b434450c8201bf8",
+        "documentIdRecomputed": "widx:3926b52c4cbe976facd635493d440992"
+      }
+    },
+    {
+      "name": "#26 GitLab Project",
+      "input": {
+        "url": "https://gitlab.com/group/project",
+        "title": "GitLab Project",
+        "type": "Repository",
+        "platform": "GitLab",
+        "network": "clearnet",
+        "country": "de",
+        "mime": "APPLICATION/PDF"
+      },
+      "expected": {
+        "normalized": "https://gitlab.com/group/project",
+        "d": "widx:a0ca48e4c3ff7240bd2f1231fd4d42fd",
+        "x": "f598bfca62e23efdd2f63aa5f77b96fb54afa91c41ce71b9edb9ad71dca49919",
+        "content": "{\"title\":\"GitLab Project\"}",
+        "tags": [
+          [
+            "d",
+            "widx:a0ca48e4c3ff7240bd2f1231fd4d42fd"
+          ],
+          [
+            "u",
+            "https://gitlab.com/group/project"
+          ],
+          [
+            "x",
+            "f598bfca62e23efdd2f63aa5f77b96fb54afa91c41ce71b9edb9ad71dca49919"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "type",
+            "repository"
+          ],
+          [
+            "platform",
+            "gitlab"
+          ],
+          [
+            "network",
+            "clearnet"
+          ],
+          [
+            "country",
+            "DE"
+          ],
+          [
+            "mime",
+            "application/pdf"
+          ],
+          [
+            "alt",
+            "Web index observation: GitLab Project"
+          ]
+        ],
+        "contentHashRecomputed": "f598bfca62e23efdd2f63aa5f77b96fb54afa91c41ce71b9edb9ad71dca49919",
+        "documentIdRecomputed": "widx:a0ca48e4c3ff7240bd2f1231fd4d42fd"
+      }
+    },
+    {
+      "name": "#27 PDF Spec",
+      "input": {
+        "url": "https://docs.example.com/spec.pdf",
+        "title": "PDF Spec",
+        "mime": "application/pdf; charset=utf-8",
+        "type": "file"
+      },
+      "expected": {
+        "normalized": "https://docs.example.com/spec.pdf",
+        "d": "widx:a54d472e3d2acaeff02c2d653b7a6be5",
+        "x": "9029c85fc2fae1918248db6a35550f9dd5dfb85fd3a2ffe635085d0b326ce320",
+        "content": "{\"title\":\"PDF Spec\"}",
+        "tags": [
+          [
+            "d",
+            "widx:a54d472e3d2acaeff02c2d653b7a6be5"
+          ],
+          [
+            "u",
+            "https://docs.example.com/spec.pdf"
+          ],
+          [
+            "x",
+            "9029c85fc2fae1918248db6a35550f9dd5dfb85fd3a2ffe635085d0b326ce320"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "type",
+            "file"
+          ],
+          [
+            "mime",
+            "application/pdf; charset=utf-8"
+          ],
+          [
+            "alt",
+            "Web index observation: PDF Spec"
+          ]
+        ],
+        "contentHashRecomputed": "9029c85fc2fae1918248db6a35550f9dd5dfb85fd3a2ffe635085d0b326ce320",
+        "documentIdRecomputed": "widx:a54d472e3d2acaeff02c2d653b7a6be5"
+      }
+    },
+    {
+      "name": "#28 Onion Service Doc",
+      "input": {
+        "url": "https://onion.example.onion/hidden",
+        "title": "Onion Service Doc",
+        "network": "tor"
+      },
+      "expected": {
+        "normalized": "https://onion.example.onion/hidden",
+        "d": "widx:9c7a54006b0a11698a0aeb9583a644e7",
+        "x": "6d530c47d3183ad38638719423a0effe65cdd37606c11dc26c3d4804852972a5",
+        "content": "{\"title\":\"Onion Service Doc\"}",
+        "tags": [
+          [
+            "d",
+            "widx:9c7a54006b0a11698a0aeb9583a644e7"
+          ],
+          [
+            "u",
+            "https://onion.example.onion/hidden"
+          ],
+          [
+            "x",
+            "6d530c47d3183ad38638719423a0effe65cdd37606c11dc26c3d4804852972a5"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "network",
+            "tor"
+          ],
+          [
+            "alt",
+            "Web index observation: Onion Service Doc"
+          ]
+        ],
+        "contentHashRecomputed": "6d530c47d3183ad38638719423a0effe65cdd37606c11dc26c3d4804852972a5",
+        "documentIdRecomputed": "widx:9c7a54006b0a11698a0aeb9583a644e7"
+      }
+    },
+    {
+      "name": "#29 Invalid Extensions Dropped",
+      "input": {
+        "url": "https://example.com/bad-ext",
+        "title": "Invalid Extensions Dropped",
+        "type": "not a keyword!",
+        "country": "DEN",
+        "mime": "not-a-mime",
+        "platform": "ok_platform-1"
+      },
+      "expected": {
+        "normalized": "https://example.com/bad-ext",
+        "d": "widx:a2f530707e2c28a3a61d55c66d1c9e12",
+        "x": "c22c8d9329a139d195d54f2842a44cb847f1f0ec8a1d0ff92c54f2e9a3d7c1d1",
+        "content": "{\"title\":\"Invalid Extensions Dropped\"}",
+        "tags": [
+          [
+            "d",
+            "widx:a2f530707e2c28a3a61d55c66d1c9e12"
+          ],
+          [
+            "u",
+            "https://example.com/bad-ext"
+          ],
+          [
+            "x",
+            "c22c8d9329a139d195d54f2842a44cb847f1f0ec8a1d0ff92c54f2e9a3d7c1d1"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "platform",
+            "ok_platform-1"
+          ],
+          [
+            "alt",
+            "Web index observation: Invalid Extensions Dropped"
+          ]
+        ],
+        "contentHashRecomputed": "c22c8d9329a139d195d54f2842a44cb847f1f0ec8a1d0ff92c54f2e9a3d7c1d1",
+        "documentIdRecomputed": "widx:a2f530707e2c28a3a61d55c66d1c9e12"
+      }
+    },
+    {
+      "name": "#30 Video Doc",
+      "input": {
+        "url": "https://video.example.com/watch/9",
+        "title": "Video Doc",
+        "type": "video",
+        "platform": "vimeo",
+        "category": "Entertainment",
+        "network": "clearnet"
+      },
+      "expected": {
+        "normalized": "https://video.example.com/watch/9",
+        "d": "widx:2c183edc8de9640c5bc8c7af49e281b0",
+        "x": "31890fbdc852cdebc88e8e753699d4cab2b165f713910f6514e23fbb3b04c0c5",
+        "content": "{\"title\":\"Video Doc\"}",
+        "tags": [
+          [
+            "d",
+            "widx:2c183edc8de9640c5bc8c7af49e281b0"
+          ],
+          [
+            "u",
+            "https://video.example.com/watch/9"
+          ],
+          [
+            "x",
+            "31890fbdc852cdebc88e8e753699d4cab2b165f713910f6514e23fbb3b04c0c5"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "type",
+            "video"
+          ],
+          [
+            "platform",
+            "vimeo"
+          ],
+          [
+            "category",
+            "entertainment"
+          ],
+          [
+            "network",
+            "clearnet"
+          ],
+          [
+            "alt",
+            "Web index observation: Video Doc"
+          ]
+        ],
+        "contentHashRecomputed": "31890fbdc852cdebc88e8e753699d4cab2b165f713910f6514e23fbb3b04c0c5",
+        "documentIdRecomputed": "widx:2c183edc8de9640c5bc8c7af49e281b0"
+      }
+    },
+    {
+      "name": "#31 Underscore Extension Value",
+      "input": {
+        "url": "https://example.com/ext-underscore",
+        "title": "Underscore Extension Value",
+        "type": "doc_page"
+      },
+      "expected": {
+        "normalized": "https://example.com/ext-underscore",
+        "d": "widx:cfffcfa76d8f398001afed38a575d7e6",
+        "x": "26c41e0ff6713a62e191630cd17255c8dfc01d0d1f3e18a58b1f4deea2a1c703",
+        "content": "{\"title\":\"Underscore Extension Value\"}",
+        "tags": [
+          [
+            "d",
+            "widx:cfffcfa76d8f398001afed38a575d7e6"
+          ],
+          [
+            "u",
+            "https://example.com/ext-underscore"
+          ],
+          [
+            "x",
+            "26c41e0ff6713a62e191630cd17255c8dfc01d0d1f3e18a58b1f4deea2a1c703"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "type",
+            "doc_page"
+          ],
+          [
+            "alt",
+            "Web index observation: Underscore Extension Value"
+          ]
+        ],
+        "contentHashRecomputed": "26c41e0ff6713a62e191630cd17255c8dfc01d0d1f3e18a58b1f4deea2a1c703",
+        "documentIdRecomputed": "widx:cfffcfa76d8f398001afed38a575d7e6"
+      }
+    },
+    {
+      "name": "#32 Max Length Extension",
+      "input": {
+        "url": "https://example.com/ext-max-len",
+        "title": "Max Length Extension",
+        "category": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "expected": {
+        "normalized": "https://example.com/ext-max-len",
+        "d": "widx:cef6ff8b6e2de6ade932810695fcba4f",
+        "x": "ce7274a0badbc60000f47442d900469c8c84be3cfb46db103a5732eeb9172f75",
+        "content": "{\"title\":\"Max Length Extension\"}",
+        "tags": [
+          [
+            "d",
+            "widx:cef6ff8b6e2de6ade932810695fcba4f"
+          ],
+          [
+            "u",
+            "https://example.com/ext-max-len"
+          ],
+          [
+            "x",
+            "ce7274a0badbc60000f47442d900469c8c84be3cfb46db103a5732eeb9172f75"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "category",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ],
+          [
+            "alt",
+            "Web index observation: Max Length Extension"
+          ]
+        ],
+        "contentHashRecomputed": "ce7274a0badbc60000f47442d900469c8c84be3cfb46db103a5732eeb9172f75",
+        "documentIdRecomputed": "widx:cef6ff8b6e2de6ade932810695fcba4f"
+      }
+    },
+    {
+      "name": "#33 Too Long Extension Dropped",
+      "input": {
+        "url": "https://example.com/ext-too-long",
+        "title": "Too Long Extension Dropped",
+        "category": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "expected": {
+        "normalized": "https://example.com/ext-too-long",
+        "d": "widx:f5ecca7162d294f72f55f9c878b14f47",
+        "x": "c4afbc5b9b578b4d4725c97c4c097db2824d16485d22627ad5650014918c79f0",
+        "content": "{\"title\":\"Too Long Extension Dropped\"}",
+        "tags": [
+          [
+            "d",
+            "widx:f5ecca7162d294f72f55f9c878b14f47"
+          ],
+          [
+            "u",
+            "https://example.com/ext-too-long"
+          ],
+          [
+            "x",
+            "c4afbc5b9b578b4d4725c97c4c097db2824d16485d22627ad5650014918c79f0"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Too Long Extension Dropped"
+          ]
+        ],
+        "contentHashRecomputed": "c4afbc5b9b578b4d4725c97c4c097db2824d16485d22627ad5650014918c79f0",
+        "documentIdRecomputed": "widx:f5ecca7162d294f72f55f9c878b14f47"
+      }
+    },
+    {
+      "name": "#34 HTTPS Image",
+      "input": {
+        "url": "https://example.com/img-ok",
+        "title": "HTTPS Image",
+        "image": "https://cdn.example.com/img/hero.png"
+      },
+      "expected": {
+        "normalized": "https://example.com/img-ok",
+        "d": "widx:549512bf005d63610de18f00041df4ee",
+        "x": "4129f7cccb7069b176a9610376c976cbad706500a4a9bddc15caf60cfe0d1367",
+        "content": "{\"title\":\"HTTPS Image\",\"image\":\"https://cdn.example.com/img/hero.png\"}",
+        "tags": [
+          [
+            "d",
+            "widx:549512bf005d63610de18f00041df4ee"
+          ],
+          [
+            "u",
+            "https://example.com/img-ok"
+          ],
+          [
+            "x",
+            "4129f7cccb7069b176a9610376c976cbad706500a4a9bddc15caf60cfe0d1367"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: HTTPS Image"
+          ]
+        ],
+        "contentHashRecomputed": "4129f7cccb7069b176a9610376c976cbad706500a4a9bddc15caf60cfe0d1367",
+        "documentIdRecomputed": "widx:549512bf005d63610de18f00041df4ee"
+      }
+    },
+    {
+      "name": "#35 HTTP Image Dropped",
+      "input": {
+        "url": "https://example.com/img-http",
+        "title": "HTTP Image Dropped",
+        "image": "http://cdn.example.com/insecure.png"
+      },
+      "expected": {
+        "normalized": "https://example.com/img-http",
+        "d": "widx:8634cf631325134e95122452c5d2c592",
+        "x": "6f9d89cf152e7fbc1295caf6181b1f61286d913f9da13bb79a1deb7425d14c3d",
+        "content": "{\"title\":\"HTTP Image Dropped\"}",
+        "tags": [
+          [
+            "d",
+            "widx:8634cf631325134e95122452c5d2c592"
+          ],
+          [
+            "u",
+            "https://example.com/img-http"
+          ],
+          [
+            "x",
+            "6f9d89cf152e7fbc1295caf6181b1f61286d913f9da13bb79a1deb7425d14c3d"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: HTTP Image Dropped"
+          ]
+        ],
+        "contentHashRecomputed": "6f9d89cf152e7fbc1295caf6181b1f61286d913f9da13bb79a1deb7425d14c3d",
+        "documentIdRecomputed": "widx:8634cf631325134e95122452c5d2c592"
+      }
+    },
+    {
+      "name": "#36 Relative Image Dropped",
+      "input": {
+        "url": "https://example.com/img-relative",
+        "title": "Relative Image Dropped",
+        "image": "/images/hero.png"
+      },
+      "expected": {
+        "normalized": "https://example.com/img-relative",
+        "d": "widx:b973783dfc1ad8c6f96d94de80226eb3",
+        "x": "7ca0df99ad86005b4c9a1f29be56ad616aa03cf45a3a0a64c4a5fe55cb1d3619",
+        "content": "{\"title\":\"Relative Image Dropped\"}",
+        "tags": [
+          [
+            "d",
+            "widx:b973783dfc1ad8c6f96d94de80226eb3"
+          ],
+          [
+            "u",
+            "https://example.com/img-relative"
+          ],
+          [
+            "x",
+            "7ca0df99ad86005b4c9a1f29be56ad616aa03cf45a3a0a64c4a5fe55cb1d3619"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Relative Image Dropped"
+          ]
+        ],
+        "contentHashRecomputed": "7ca0df99ad86005b4c9a1f29be56ad616aa03cf45a3a0a64c4a5fe55cb1d3619",
+        "documentIdRecomputed": "widx:b973783dfc1ad8c6f96d94de80226eb3"
+      }
+    },
+    {
+      "name": "#37 Data URI Image Dropped",
+      "input": {
+        "url": "https://example.com/img-data",
+        "title": "Data URI Image Dropped",
+        "image": "data:image/png;base64,iVBORw0KGgo="
+      },
+      "expected": {
+        "normalized": "https://example.com/img-data",
+        "d": "widx:2940ea0eadf310ed99bee4e80fa59cb4",
+        "x": "5d55a7197149edee8a8641246406deab48733ab5f57de3e55213dac3b2df6345",
+        "content": "{\"title\":\"Data URI Image Dropped\"}",
+        "tags": [
+          [
+            "d",
+            "widx:2940ea0eadf310ed99bee4e80fa59cb4"
+          ],
+          [
+            "u",
+            "https://example.com/img-data"
+          ],
+          [
+            "x",
+            "5d55a7197149edee8a8641246406deab48733ab5f57de3e55213dac3b2df6345"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Data URI Image Dropped"
+          ]
+        ],
+        "contentHashRecomputed": "5d55a7197149edee8a8641246406deab48733ab5f57de3e55213dac3b2df6345",
+        "documentIdRecomputed": "widx:2940ea0eadf310ed99bee4e80fa59cb4"
+      }
+    },
+    {
+      "name": "#38 Long Image URL Sliced",
+      "input": {
+        "url": "https://example.com/img-long",
+        "title": "Long Image URL Sliced",
+        "image": "https://cdn.example.com/pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp.png"
+      },
+      "expected": {
+        "normalized": "https://example.com/img-long",
+        "d": "widx:68f61f06cff9f0c14c9320b3bd41fad9",
+        "x": "78d8bf5c134810d965c9ca401af983c8cdefc1cbe8645c416a715a37a3ff4699",
+        "content": "{\"title\":\"Long Image URL Sliced\",\"image\":\"https://cdn.example.com/pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp\"}",
+        "tags": [
+          [
+            "d",
+            "widx:68f61f06cff9f0c14c9320b3bd41fad9"
+          ],
+          [
+            "u",
+            "https://example.com/img-long"
+          ],
+          [
+            "x",
+            "78d8bf5c134810d965c9ca401af983c8cdefc1cbe8645c416a715a37a3ff4699"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Long Image URL Sliced"
+          ]
+        ],
+        "contentHashRecomputed": "78d8bf5c134810d965c9ca401af983c8cdefc1cbe8645c416a715a37a3ff4699",
+        "documentIdRecomputed": "widx:68f61f06cff9f0c14c9320b3bd41fad9"
+      }
+    },
+    {
+      "name": "#39 HTTPS Uppercase Scheme Image",
+      "input": {
+        "url": "https://example.com/img-case",
+        "title": "HTTPS Uppercase Scheme Image",
+        "image": "HTTPS://CDN.Example.COM/Img.PNG"
+      },
+      "expected": {
+        "normalized": "https://example.com/img-case",
+        "d": "widx:8e7bfb49aa584426c84c4239b0c0a3f7",
+        "x": "2d7541550fd47efdf9beab621fd7da3296363501a2101e29f5239813e9c11c6c",
+        "content": "{\"title\":\"HTTPS Uppercase Scheme Image\",\"image\":\"HTTPS://CDN.Example.COM/Img.PNG\"}",
+        "tags": [
+          [
+            "d",
+            "widx:8e7bfb49aa584426c84c4239b0c0a3f7"
+          ],
+          [
+            "u",
+            "https://example.com/img-case"
+          ],
+          [
+            "x",
+            "2d7541550fd47efdf9beab621fd7da3296363501a2101e29f5239813e9c11c6c"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: HTTPS Uppercase Scheme Image"
+          ]
+        ],
+        "contentHashRecomputed": "2d7541550fd47efdf9beab621fd7da3296363501a2101e29f5239813e9c11c6c",
+        "documentIdRecomputed": "widx:8e7bfb49aa584426c84c4239b0c0a3f7"
+      }
+    },
+    {
+      "name": "#40 No Image At All",
+      "input": {
+        "url": "https://example.com/img-none",
+        "title": "No Image At All",
+        "description": "Image key must be absent from content."
+      },
+      "expected": {
+        "normalized": "https://example.com/img-none",
+        "d": "widx:087f3dbec9b968268838e1af2f220faf",
+        "x": "fa2e28315584eba825991c1d2a08498c930d77937883d05f96e9a58f8ba7cbe5",
+        "content": "{\"title\":\"No Image At All\",\"description\":\"Image key must be absent from content.\"}",
+        "tags": [
+          [
+            "d",
+            "widx:087f3dbec9b968268838e1af2f220faf"
+          ],
+          [
+            "u",
+            "https://example.com/img-none"
+          ],
+          [
+            "x",
+            "fa2e28315584eba825991c1d2a08498c930d77937883d05f96e9a58f8ba7cbe5"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: No Image At All"
+          ]
+        ],
+        "contentHashRecomputed": "fa2e28315584eba825991c1d2a08498c930d77937883d05f96e9a58f8ba7cbe5",
+        "documentIdRecomputed": "widx:087f3dbec9b968268838e1af2f220faf"
+      }
+    },
+    {
+      "name": "#41 TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+      "input": {
+        "url": "https://example.com/long-title",
+        "title": "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+        "description": "Title truncates to 300."
+      },
+      "expected": {
+        "normalized": "https://example.com/long-title",
+        "d": "widx:8a4e325d3d17e34c2c8eec57dd04ae0a",
+        "x": "418614fb4cd8eb6783d2ef9eeb97450dcb451dcfa2b1ca8a91ebccee4badd155",
+        "content": "{\"title\":\"TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT\",\"description\":\"Title truncates to 300.\"}",
+        "tags": [
+          [
+            "d",
+            "widx:8a4e325d3d17e34c2c8eec57dd04ae0a"
+          ],
+          [
+            "u",
+            "https://example.com/long-title"
+          ],
+          [
+            "x",
+            "418614fb4cd8eb6783d2ef9eeb97450dcb451dcfa2b1ca8a91ebccee4badd155"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+          ]
+        ],
+        "contentHashRecomputed": "418614fb4cd8eb6783d2ef9eeb97450dcb451dcfa2b1ca8a91ebccee4badd155",
+        "documentIdRecomputed": "widx:8a4e325d3d17e34c2c8eec57dd04ae0a"
+      }
+    },
+    {
+      "name": "#42 Long Description",
+      "input": {
+        "url": "https://example.com/long-desc",
+        "title": "Long Description",
+        "description": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+      },
+      "expected": {
+        "normalized": "https://example.com/long-desc",
+        "d": "widx:52d73945337c0bc46faa65b7c03c036d",
+        "x": "a6592c0e150652c32186c4d813b744a307409b5d65f9516152eb4173cbd3492e",
+        "content": "{\"title\":\"Long Description\",\"description\":\"DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD\"}",
+        "tags": [
+          [
+            "d",
+            "widx:52d73945337c0bc46faa65b7c03c036d"
+          ],
+          [
+            "u",
+            "https://example.com/long-desc"
+          ],
+          [
+            "x",
+            "a6592c0e150652c32186c4d813b744a307409b5d65f9516152eb4173cbd3492e"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Long Description"
+          ]
+        ],
+        "contentHashRecomputed": "a6592c0e150652c32186c4d813b744a307409b5d65f9516152eb4173cbd3492e",
+        "documentIdRecomputed": "widx:52d73945337c0bc46faa65b7c03c036d"
+      }
+    },
+    {
+      "name": "#43    Padded Title   ",
+      "input": {
+        "url": "https://example.com/whitespace-title",
+        "title": "   Padded Title   ",
+        "description": "  Padded description.  "
+      },
+      "expected": {
+        "normalized": "https://example.com/whitespace-title",
+        "d": "widx:36eb0bf67f4be969a723576e9aabe10f",
+        "x": "ade29c126a5d7b1f68f0173412e13dce3cd61613f98f693a7e2ea225241c6302",
+        "content": "{\"title\":\"Padded Title\",\"description\":\"Padded description.\"}",
+        "tags": [
+          [
+            "d",
+            "widx:36eb0bf67f4be969a723576e9aabe10f"
+          ],
+          [
+            "u",
+            "https://example.com/whitespace-title"
+          ],
+          [
+            "x",
+            "ade29c126a5d7b1f68f0173412e13dce3cd61613f98f693a7e2ea225241c6302"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Padded Title"
+          ]
+        ],
+        "contentHashRecomputed": "ade29c126a5d7b1f68f0173412e13dce3cd61613f98f693a7e2ea225241c6302",
+        "documentIdRecomputed": "widx:36eb0bf67f4be969a723576e9aabe10f"
+      }
+    },
+    {
+      "name": "#44 No Description Key",
+      "input": {
+        "url": "https://example.com/no-desc",
+        "title": "No Description Key"
+      },
+      "expected": {
+        "normalized": "https://example.com/no-desc",
+        "d": "widx:be8f9e01e2d9f136492b8c6329f8b42c",
+        "x": "84ab57d4c1d1d0b6d6b74e54701694ad102990b85f84f00ff5724c2befbe62c3",
+        "content": "{\"title\":\"No Description Key\"}",
+        "tags": [
+          [
+            "d",
+            "widx:be8f9e01e2d9f136492b8c6329f8b42c"
+          ],
+          [
+            "u",
+            "https://example.com/no-desc"
+          ],
+          [
+            "x",
+            "84ab57d4c1d1d0b6d6b74e54701694ad102990b85f84f00ff5724c2befbe62c3"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: No Description Key"
+          ]
+        ],
+        "contentHashRecomputed": "84ab57d4c1d1d0b6d6b74e54701694ad102990b85f84f00ff5724c2befbe62c3",
+        "documentIdRecomputed": "widx:be8f9e01e2d9f136492b8c6329f8b42c"
+      }
+    },
+    {
+      "name": "#45 Empty Description",
+      "input": {
+        "url": "https://example.com/empty-desc",
+        "title": "Empty Description",
+        "description": ""
+      },
+      "expected": {
+        "normalized": "https://example.com/empty-desc",
+        "d": "widx:633167f67a52c08f966a189b7437a46f",
+        "x": "d25aefdebe6a5c1faa417b6aa5d5af7c29201f9f0455fad4eeb8e7cd7e904669",
+        "content": "{\"title\":\"Empty Description\"}",
+        "tags": [
+          [
+            "d",
+            "widx:633167f67a52c08f966a189b7437a46f"
+          ],
+          [
+            "u",
+            "https://example.com/empty-desc"
+          ],
+          [
+            "x",
+            "d25aefdebe6a5c1faa417b6aa5d5af7c29201f9f0455fad4eeb8e7cd7e904669"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Empty Description"
+          ]
+        ],
+        "contentHashRecomputed": "d25aefdebe6a5c1faa417b6aa5d5af7c29201f9f0455fad4eeb8e7cd7e904669",
+        "documentIdRecomputed": "widx:633167f67a52c08f966a189b7437a46f"
+      }
+    },
+    {
+      "name": "#46 Source Sliced To 100",
+      "input": {
+        "url": "https://example.com/long-source",
+        "title": "Source Sliced To 100",
+        "source": "crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 "
+      },
+      "expected": {
+        "normalized": "https://example.com/long-source",
+        "d": "widx:da626f00abd413d8a8d6ef44e396616a",
+        "x": "eb6b7f34dcade37532ad54430f8a17ebce0a36903f38cba25f492415b7609c86",
+        "content": "{\"title\":\"Source Sliced To 100\"}",
+        "tags": [
+          [
+            "d",
+            "widx:da626f00abd413d8a8d6ef44e396616a"
+          ],
+          [
+            "u",
+            "https://example.com/long-source"
+          ],
+          [
+            "x",
+            "eb6b7f34dcade37532ad54430f8a17ebce0a36903f38cba25f492415b7609c86"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "source",
+            "crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 crawlstr/v2 craw"
+          ],
+          [
+            "alt",
+            "Web index observation: Source Sliced To 100"
+          ]
+        ],
+        "contentHashRecomputed": "eb6b7f34dcade37532ad54430f8a17ebce0a36903f38cba25f492415b7609c86",
+        "documentIdRecomputed": "widx:da626f00abd413d8a8d6ef44e396616a"
+      }
+    },
+    {
+      "name": "#47 Title",
+      "input": {
+        "url": "https://example.com/newlines",
+        "title": "Title",
+        "description": "Line one.\nLine two.\tTabbed."
+      },
+      "expected": {
+        "normalized": "https://example.com/newlines",
+        "d": "widx:0171761cf413f4634bfb56d66b0976f6",
+        "x": "692b41223514ffdfdbc541ffd4695913abc622106aafb0a5caeb16f65de89eec",
+        "content": "{\"title\":\"Title\",\"description\":\"Line one.\\nLine two.\\tTabbed.\"}",
+        "tags": [
+          [
+            "d",
+            "widx:0171761cf413f4634bfb56d66b0976f6"
+          ],
+          [
+            "u",
+            "https://example.com/newlines"
+          ],
+          [
+            "x",
+            "692b41223514ffdfdbc541ffd4695913abc622106aafb0a5caeb16f65de89eec"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Title"
+          ]
+        ],
+        "contentHashRecomputed": "692b41223514ffdfdbc541ffd4695913abc622106aafb0a5caeb16f65de89eec",
+        "documentIdRecomputed": "widx:0171761cf413f4634bfb56d66b0976f6"
+      }
+    },
+    {
+      "name": "#48 Explicit Default HTTPS Port",
+      "input": {
+        "url": "https://example.org:443/",
+        "title": "Explicit Default HTTPS Port"
+      },
+      "expected": {
+        "normalized": "https://example.org/",
+        "d": "widx:8198d1bac40a1033653a78e48800cefc",
+        "x": "4dee39f6f40dac55ead0eac5fbf742e972744f080763e93069b2e6059a860f7e",
+        "content": "{\"title\":\"Explicit Default HTTPS Port\"}",
+        "tags": [
+          [
+            "d",
+            "widx:8198d1bac40a1033653a78e48800cefc"
+          ],
+          [
+            "u",
+            "https://example.org/"
+          ],
+          [
+            "x",
+            "4dee39f6f40dac55ead0eac5fbf742e972744f080763e93069b2e6059a860f7e"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Explicit Default HTTPS Port"
+          ]
+        ],
+        "contentHashRecomputed": "4dee39f6f40dac55ead0eac5fbf742e972744f080763e93069b2e6059a860f7e",
+        "documentIdRecomputed": "widx:8198d1bac40a1033653a78e48800cefc"
+      }
+    },
+    {
+      "name": "#49 API Endpoint With ref_src",
+      "input": {
+        "url": "http://www.example.com:8080/api/v1/items/?q=1&ref_src=twsrc",
+        "title": "API Endpoint With ref_src",
+        "source": "indexstr/v2"
+      },
+      "expected": {
+        "normalized": "http://example.com:8080/api/v1/items?q=1",
+        "d": "widx:a5decc473e0ee404e26d0cf284e46dcb",
+        "x": "b582574cb11fbf2a7f028c5725c4d54ff02682340cf109ca8ff75e7fadb96a3d",
+        "content": "{\"title\":\"API Endpoint With ref_src\"}",
+        "tags": [
+          [
+            "d",
+            "widx:a5decc473e0ee404e26d0cf284e46dcb"
+          ],
+          [
+            "u",
+            "http://example.com:8080/api/v1/items?q=1"
+          ],
+          [
+            "x",
+            "b582574cb11fbf2a7f028c5725c4d54ff02682340cf109ca8ff75e7fadb96a3d"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "source",
+            "indexstr/v2"
+          ],
+          [
+            "alt",
+            "Web index observation: API Endpoint With ref_src"
+          ]
+        ],
+        "contentHashRecomputed": "b582574cb11fbf2a7f028c5725c4d54ff02682340cf109ca8ff75e7fadb96a3d",
+        "documentIdRecomputed": "widx:a5decc473e0ee404e26d0cf284e46dcb"
+      }
+    },
+    {
+      "name": "#50 Padded URL Input",
+      "input": {
+        "url": "  https://example.com/needs-trim  ",
+        "title": "Padded URL Input",
+        "tags": [
+          "trim"
+        ]
+      },
+      "expected": {
+        "normalized": "https://example.com/needs-trim",
+        "d": "widx:e4287b3ff89a6b07da61caf914b89d96",
+        "x": "59ea9747644df2dd3360b3a99cb2274ce1504048530e8af74a94b2796294257c",
+        "content": "{\"title\":\"Padded URL Input\"}",
+        "tags": [
+          [
+            "d",
+            "widx:e4287b3ff89a6b07da61caf914b89d96"
+          ],
+          [
+            "u",
+            "https://example.com/needs-trim"
+          ],
+          [
+            "t",
+            "trim"
+          ],
+          [
+            "x",
+            "59ea9747644df2dd3360b3a99cb2274ce1504048530e8af74a94b2796294257c"
+          ],
+          [
+            "v",
+            "1"
+          ],
+          [
+            "alt",
+            "Web index observation: Padded URL Input"
+          ]
+        ],
+        "contentHashRecomputed": "59ea9747644df2dd3360b3a99cb2274ce1504048530e8af74a94b2796294257c",
+        "documentIdRecomputed": "widx:e4287b3ff89a6b07da61caf914b89d96"
+      }
+    }
+  ]
+}
